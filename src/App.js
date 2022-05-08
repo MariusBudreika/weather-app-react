@@ -47,15 +47,19 @@ function App() {
     fetchWeatherDataHandler();
   }, [fetchWeatherDataHandler]);
 
+  let content = "Loading...";
+  if (!isLoading) {
+    content = <WeatherInfo data={data} />;
+  }
+  if (error) {
+    content = <p className="error">{error}</p>;
+  }
+
   return (
     <div className="app">
       <Card>
-        {!isLoading && (
-          <>
-            <Input onSearch={searchQueryHandler} />
-            <WeatherInfo data={data} />
-          </>
-        )}
+        <Input onSearch={searchQueryHandler} />
+        {content}
       </Card>
     </div>
   );
