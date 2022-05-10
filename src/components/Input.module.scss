@@ -1,0 +1,21 @@
+.input {
+    margin-top: -2rem;
+
+    &SearchBar {
+        width: 100%;
+        margin-bottom: 5rem;
+        background: none;
+        border: none;
+        background-color: rgba(255,255,255, 0.5);
+        padding: 0.8rem;
+        border-radius: 0px 0px 16px 16px;
+       outline: none;
+       box-shadow: 0px 3px rgba(255,255,255, 0.15);
+       font-size: 1.2rem;
+       color: #313131;
+    }
+
+    &SearchBar:focus {
+        background-color: rgba(255,255,255, 0.7);
+    }
+}
